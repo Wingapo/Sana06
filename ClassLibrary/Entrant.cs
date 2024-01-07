@@ -4,9 +4,9 @@ namespace ClassLibrary
 {
     public class Entrant : Person
     {
-        byte EIT_Score;
-        float EducationDocumentPoints;
-        string GeneralEducationalInstitution;
+        protected byte EIT_Score;
+        protected float EducationDocumentPoints;
+        protected string GeneralEducationalInstitution;
 
         public Entrant() : base() 
         {
