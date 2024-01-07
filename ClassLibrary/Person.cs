@@ -22,14 +22,19 @@ namespace ClassLibrary
             BirthDate = birthDate;
         }
 
+        public Person(Person person)
+        {
+            Name = person.Name;
+            Surname = person.Surname;
+            BirthDate = person.BirthDate;
+        }
+
         public virtual string ShowInfo()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append('[');
             sb.Append("Name: "); sb.Append(Name);
             sb.Append(", Surname: "); sb.Append(Surname);
             sb.Append(", Birth date: "); sb.Append(BirthDate.ToShortDateString());
-            sb.Append(']');
             return sb.ToString();
         }
     }
